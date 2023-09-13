@@ -20,7 +20,8 @@ hexagon = Block([[1,0,0],[1,1,1],[1,1,0],[0,2,1],[0,1,0],[0,1,1]],muc=0.7)
 triangle = Block([[0,0,1]],muc=0.7)
 link = Block([[0,0,0],[0,1,1],[1,0,0],[1,0,1],[1,1,1],[0,1,0]],muc=0.7)
 hextarget = Block([[1,0,1],[0,0,0],[2,0,0]])
-
+wandb_project = "INSERT THE PROJECT NAME HERE"
+wandb_entity = "INSERT THE WANDB ENTITY HERE"
 class ReplayDiscreteGym():
     def __init__(self,
                  config,
@@ -42,7 +43,7 @@ class ReplayDiscreteGym():
             ):
         if use_wandb:
             self.use_wandb = True
-            self.run = wandb.init(project="MARL", entity="flask",config=config)
+            self.run = wandb.init(project=wandb_project, entity=wandb_entity,config=config)
             self.config = wandb.config
         else:
             self.use_wandb = False
