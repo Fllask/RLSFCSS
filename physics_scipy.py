@@ -7,7 +7,7 @@ Created on Mon Sep 19 09:55:31 2022
 import time 
 import numpy as np
 from scipy.optimize import linprog 
-from discrete_blocks import discret_block as Block, Grid, switch_direction,grid2real
+#from discrete_blocks import discret_block as Block, Grid, switch_direction,grid2real
 
 
 
